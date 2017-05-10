@@ -12,13 +12,6 @@ feature 'homepage' do
     expect(current_path).to eq('/set_up')
   end
 
-  scenario 'click on sources button' do
-    visit '/'
-    click_button('Sources')
-    expect(page).to have_content 'Sources'
-    expect(current_path).to eq('/sources')
-  end
-
   scenario 'click on tutorials button' do
     visit '/'
     click_button('Tutorials')
@@ -26,4 +19,17 @@ feature 'homepage' do
     expect(current_path).to eq('/tutorials')
   end
 
+  scenario 'click on About Us button' do
+    visit '/'
+    click_button('About Us')
+    expect(page).to have_content 'About Us'
+    expect(current_path).to eq('/about_us')
+  end
+
+  scenario 'click on sources button' do
+    visit '/'
+    click_button('Sources')
+    expect(page).to have_content 'Sources'
+    expect(current_path).to eq('/sources')
+  end
 end

@@ -14,6 +14,10 @@ class Website < Sinatra::Base
     erb :'tutorials'
   end
 
+  get '/about_us' do
+    erb :'about_us'
+  end
+
   get '/sources' do
     erb :'sources'
   end
