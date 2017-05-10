@@ -19,6 +19,22 @@ feature 'homepage' do
     expect(current_path).to eq('/tutorials')
   end
 
+  scenario 'can navigate in tutorials to colour' do
+    visit '/'
+    click_button('Tutorials')
+    click_button('Change Colour')
+    expect(page).to have_content 'Colour'
+    expect(current_path).to eq('/tutorials/colour')
+  end
+
+  scenario 'can navigate in tutorials to change sprites design' do
+    visit '/'
+    click_button('Tutorials')
+    click_button('Change Sprites')
+    expect(page).to have_content 'Sprites'
+    expect(current_path).to eq('/tutorials/sprites')
+  end
+
   scenario 'click on About Us button' do
     visit '/'
     click_button('About Us')
