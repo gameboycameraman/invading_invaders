@@ -3,6 +3,14 @@ Set up
 First thing needed is an empty project folder. You will also want to navigate into this folder in your terminal. If you are un-familiar with the terminal, you can find basic commands here: https://gist.github.com/poopsplat/7195274
 It is worth noting we use two methods, see tutorials section for further clarification; each software mentioned below will either have an 'I' or 'II' depending which method the software is needed for.
 
+
+Text Editor - Atom ( I & II )
+	https://atom.io/
+
+	Download from site and follow instructions on website.
+
+	This is a text editor that we used to change the files, also a nice program for general code writing, can also be note in Text Edit.
+
 Emulator - OpenEMU (Only for Macs) ( I & II )
 	http://openemu.org/
 
