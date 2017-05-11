@@ -2,7 +2,7 @@
 
 ## Description
 
-![alt text](resources/images/SpaceInvaders.jpg)
+![alt text](./resources/images/SpaceInvaders.jpg)
 
 ## Set Up
 
