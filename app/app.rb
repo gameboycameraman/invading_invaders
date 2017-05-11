@@ -22,14 +22,16 @@ class Website < Sinatra::Base
     erb :'sprites'
   end
 
-  get '/about_us' do
-    erb :'about_us'
-  end
-
   get '/sources' do
     erb :'sources'
   end
 
+  get '/your_hacks' do
+    erb :'your_hacks'
+  end
 
+  get '/about_us' do
+    erb :'about_us'
+  end
 
 end
