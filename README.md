@@ -25,7 +25,7 @@ http://localhost:4000/
 ```
 
 ## Developers
-The Atari 'Space Invaders' game hack and website was the work of the following developer:
+The Atari 'Space Invaders' game hack and website was the work of the following developers:
 
 - [Hasan Sonmez](https://github.com/UltimateCoder00)
 - [Jean-Jacques Calbayrac](https://github.com/gekographe)
