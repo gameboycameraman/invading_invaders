@@ -4,8 +4,6 @@ title: Glossary
 permalink: /glossary/
 ---
 
-# **Glossary**
-
 ### ROM
 
 A ROM image is a read-only computer file which contains a copy of data from a memory chip, often from video game cartridges. ROM images are often used as a means of preserving older games, which can then be run on modern computers through emulators. Once games have been made available in ROM format, it is possible for users to make modification to the game. ROM hacking can alter the game’s graphics, levels, audio, gameplay, and other elements.

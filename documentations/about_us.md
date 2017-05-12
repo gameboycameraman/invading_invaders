@@ -1,3 +1,9 @@
+---
+layout: page
+title: About Us
+permalink: /about_us/
+---
+
 # **About The Invaders Team**
 
 Our team is composed of 4 talented developpers who studied at Makers Academy.

@@ -1,4 +1,10 @@
-# Changing Sprites (Tutorial 2)
+---
+layout: page
+title: Tutorial 2
+permalink: /tutorial2/
+---
+
+# **Changing Graphics**
 
 This second method of changing the game's graphics is a little more complicated than tutorial 1, as it involves Assembly or ASM hacking. This method will allow you to directly manipulate the game's code and potentially modify anything within the game, such as gameplay, audio and levels.
 
@@ -6,7 +12,8 @@ Here is an overview of the steps involved in ASM hacking Space Invaders:
 * Disassemble the ROM image.
 * Locate the graphics in the code.
 * Use an ASCII config file to further reveal commented representations of the graphics.
-* Change the hex data statements.
+* Change the hex data statements to modify sprites.
+* Change hex data to modify background colour.
 * Assemble the ROM again.
 
 ### 1) Disassemble Space Invaders
@@ -92,7 +99,17 @@ Each 'X' represents a weighted binary digit. There are eight bits in a byte, and
 
 Adding up the numbers with an 'X' beneath them gives a total of 254, which means is FE when converted to hexadecimal. Each byte of graphical data must be converted to hexadecimal in this manner. There is no need to change the X representations, as they are merely comments with no bearing on the final bin file. Save your file.
 
-### 5) Assemble the source code
+### 5) Change background colour
+
+To modify the game's background colour, search the source code for hex data associated with 'COLUBK'. This is a label which stands for 'Colour-Luminosity Background', and allows you to set the colour of the game's background.
+
+The hex number assigned to COLUBK represents a colour from the NTSC chart.
+
+Locate the first instance of COLUBK in the source code (at byte address F289). Change the hex value of the LDA (Load Accumulator) in the line above to modify the colour of the ground.
+
+To change the colour of the background, amend the hex value of the LDA label above the second instance of COLUBK in the source code (at byte address F9D6). Save your file.
+
+### 6) Assemble the source code
 
 Run the following in terminal:
 
@@ -100,4 +117,4 @@ Run the following in terminal:
 dasm spcinvad.src -f3 -otest1.bin
 ```
 
-Now your edited source file has been reassembled by DASM, and you can run your test1.bin file on an emulator to play Space Invaders with your modified sprites. 
+Now your edited source file has been reassembled by DASM, and you can run your test1.bin file on an emulator to play Space Invaders with your modified graphics.
