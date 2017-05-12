@@ -9,16 +9,21 @@ We are a group of software developers motivated to hack the Atari 'Space Invader
 The following steps are needed to setup and run the web server:
 
 ### 1) Installation
-Open a terminal and type:
+Open terminal and type:
 ```
 gem install jekyll bundler
 ```
-### 2) Start the local server
-Open a terminal and type:
+### 2) Bundle
+In terminal type:
+```
+bundle install
+```
+### 3) Start the local server
+In terminal type:
 ```
 bundle exec jekyll serve
 ```
-### 3) Open in your browser
+### 4) Open in your browser
 Open a web browser and type the following url:
 ```
 http://localhost:4000/
