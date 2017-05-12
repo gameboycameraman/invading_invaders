@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Tutorial 1 - Changing sprites</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search resu...">
+  <meta name="description" content="This site contains information and tutorials on hacking the Atari &#39;Space Invaders&#39; game.">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/tutorial1/">
@@ -88,8 +88,9 @@
   <div class="post-content">
     <h1 id="tutorial-1---changing-sprites"><strong>Tutorial 1 - Changing sprites</strong></h1>
 
-<p>N.b. The other method can also be used to achieve the same goals, however, if all you want to change is the graphics then this is the quickest, easiest method.
-N.b. All indexed text is further information about the software or process, it’s not needed to make the hack work, but you might want to delve further than just achieving the hack.</p>
+<p>The other method can also be used to achieve the same goals, however, if all you want to change is the graphics then this is the quickest, easiest method.</p>
+
+<p>All indexed text is further information about the software or process, it’s not needed to make the hack work, but you might want to delve further than just achieving the hack.</p>
 
 <p><strong>Pre-checks:</strong></p>
 
@@ -100,24 +101,90 @@ N.b. All indexed text is further information about the software or process, it�
 
 <p><strong>Getting DOSBox ready:</strong></p>
 
-<p>￼ <img src="/images/dosbox.png?raw=true" alt="alt text" /></p>
+<p>￼ <img src="/images/dosbox1.png?raw=true" alt="" /></p>
 
 <ul>
   <li>
     <p>Open up DOSBox by double clicking it. This will open up the DOS environment terminal.</p>
   </li>
   <li>
-    <p>You can see here the starting drive that is mounted is the Z drive, we need to mount our project folder instead, this is done by the command ‘MOUNT c ~/’path’/’project folder name’’</p>
+    <p>You can see here the starting drive that is mounted is the Z drive, we need to mount our project folder instead, this is done by the command ` MOUNT c ~/’path’/’project folder name’ `</p>
   </li>
 </ul>
 
-<p><em>In the image above the project folder being used here is Atariprg, which in located non the Desktop. We are mounting it on the C drive, the next command ‘c:’ changes to this drive.</em></p>
+<p><em>In the image above the project folder being used here is Atariprg, which in located non the Desktop. We are mounting it on the C drive.</em></p>
 
 <ul>
-  <li>Now we are ready for the next step, running showgfx.</li>
+  <li>
+    <p>Next, type <code class="highlighter-rouge">c:</code> into the DOSBox terminal window, this changes to the drive we just mounted.</p>
+  </li>
+  <li>
+    <p>Now we are ready for the next step, running showgfx.</p>
+  </li>
 </ul>
 
 <p><em>In this tutorial we are using Macs, however, all these hacks can also be done on Microsoft machines (Although you’ll need a different emulator). This step is necessary for both OS’. Due to 2600 gfx being a 16 bit program it won’t run on modern MS-DOS systems, and due to it being a windows program 	they won’t run on Mac’s. This software allows us to run these programs on both OS’, and having found no other software similar it was the only solution we found.</em></p>
+
+<p><strong>Disassembling with Editgfx:</strong></p>
+
+<p>￼ <img src="/images/dosbox2.png?raw=true" alt="" /></p>
+
+<ul>
+  <li>Still in DOSBox terminal, type <code class="highlighter-rouge">showgfx spcinvad.bin 0 4096 &gt; spcinvad.txt</code></li>
+</ul>
+
+<p>N.b. If you ROM is called something different you should reference that name instead.</p>
+
+<p><em>This software extracts all the graphics information from the file given and returns it in a text file. The format for the above command is <code class="highlighter-rouge">showgfx 'file_name.bin' 'start byte' 'end byte' &gt; 'name_of_new_file_to_be_created.txt'</code> Unless you specifically know where the sprites you want to change are in the bytes it is recommended to cover the whole file, i.e. start byte should be 0 and end should be the file length, this can be discovered by right clicking the file, selecting get info, and it will be on the panel that pops up; however, for space invaders the file is 4096 bytes. This command will create the spcinvad.txt file in your project directory.</em></p>
+
+<p><strong>Editing the text file:</strong></p>
+
+<ul>
+  <li>
+    <p>Using either TextEdit or Atom open the text file, you should see something similar to the image below:</p>
+
+    <p><img src="/images/text_file1.png?raw=true" alt="" /> ￼</p>
+  </li>
+  <li>
+    <p>Now comes the fun part, time to make some changes. Identify the sprite you want to change, in this example we will be changing the players ship; however, this method can be used for changing any sprite.</p>
+  </li>
+</ul>
+
+<p><em>The numbers on the left are hexadecimal code, referring to the games’ bytes. Most games’ sprites will be upside down. It is also wroth noting not all graphics are in one place and might be split up. As you can see in the picture, the players ship is stored at 0c0a - 0c13. The other alien sprites are located below the player ship and ending at 0ca9.</em></p>
+
+<ul>
+  <li>To change the sprites, put an <code class="highlighter-rouge">X</code> where you want the game to render the sprite, sticking to the same lines and width as the original sprite.</li>
+</ul>
+
+<p>N.b. Table width, not sprite width. By comparing the two images you can see our sprite is wider than the original, but it still fits into the table.</p>
+
+<p><img src="/images/text_file2.png?raw=true" alt="" /></p>
+<ul>
+  <li>Once you have made your changes save the file. As you can see above, we have changed the ship into a stick-man.</li>
+</ul>
+
+<p><strong>Reassemble the code:</strong></p>
+
+<p>￼ <img src="/images/dosbox3.png?raw=true" alt="" /></p>
+
+<ul>
+  <li>Type <code class="highlighter-rouge">editgfx spcinvad.txt testspac.bin</code> into the DOSBox terminal.</li>
+</ul>
+
+<p><em>The format for this command: <code class="highlighter-rouge">editgfx 'text_file_name.txt' 'new_bin_file_name.bin'</code>. It is recommended you call the file something other than the original name. One reason for this is because if something goes wrong you still have the original. This command reassembles the code into binary so that it can be played on the emulator again.</em></p>
+
+<p><strong>Try it out!!!</strong></p>
+
+<ul>
+  <li>If you’re using OpenEmu, navigate to the Atari 2600 section.</li>
+  <li>Drag your new file into the ‘Drag and Drop Games Here’ section.</li>
+  <li>In the bottom left of the window, click ‘Resolve 1 issue’.</li>
+  <li>Tick check your file name, then where it says ‘Don’t Import Selected’, select Arati 2600, then ‘Apply’.</li>
+  <li>Finally, double click your file while in the Atari 2600 console section.</li>
+  <li>If everything worked, you should be able to see your changes in game.</li>
+</ul>
+
+<p>￼ <img src="/images/space.png?raw=true" alt="" /></p>
 
   </div>
 
@@ -141,19 +208,11 @@ N.b. All indexed text is further information about the software or process, it�
             
             </li>
             
-            <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
-            
         </ul>
       </div>
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
-          
-          <li>
-            <a href="https://github.com/jekyll"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
-</span><span class="username">jekyll</span></a>
-
-          </li>
           
 
           
@@ -161,7 +220,8 @@ N.b. All indexed text is further information about the software or process, it�
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+        <p>This site contains information and tutorials on hacking the Atari
+               &#39;Space Invaders&#39; game.
 </p>
       </div>
     </div>
