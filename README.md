@@ -1,6 +1,6 @@
 # Invading the invaders
 
-￼ ![alt text](./images/SpaceInvaders.jpg?raw=true)
+￼ ![alt text](/images/spaceinvaders.jpg?raw=true)
 
 ## Description
 We are a group of software developers motivated to hack the Atari 'Space Invaders' game. We set up a website containing details of hacks performed. This involved changing the background colour and game sprites. All details are provided in the website including tutorials.
