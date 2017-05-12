@@ -1,3 +1,9 @@
+---
+layout: page
+title: Tutorial 2
+permalink: /tutorial2/
+---
+
 # Changing Sprites (Tutorial 2)
 
 This second method of changing the game's graphics is a little more complicated than tutorial 1, as it involves Assembly or ASM hacking. This method will allow you to directly manipulate the game's code and potentially modify anything within the game, such as gameplay, audio and levels.
@@ -100,4 +106,4 @@ Run the following in terminal:
 dasm spcinvad.src -f3 -otest1.bin
 ```
 
-Now your edited source file has been reassembled by DASM, and you can run your test1.bin file on an emulator to play Space Invaders with your modified sprites. 
+Now your edited source file has been reassembled by DASM, and you can run your test1.bin file on an emulator to play Space Invaders with your modified sprites.

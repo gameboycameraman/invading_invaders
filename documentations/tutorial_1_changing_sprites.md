@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tutorial 1 - Changing sprites
+title: Tutorial 1
 permalink: /tutorial1/
 ---
 
