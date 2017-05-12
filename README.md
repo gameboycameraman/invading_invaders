@@ -1,6 +1,6 @@
 # Invading the invaders
 
-￼ ![alt text](/images/SpaceInvaders.jpg?raw=true)
+￼ ![alt text](./images/SpaceInvaders.jpg?raw=true)
 
 ## Description
 We are a group of software developers motivated to hack the Atari 'Space Invaders' game. We set up a website containing details of hacks performed. This involved changing the background colour and game sprites. All details are provided in the website including tutorials.
@@ -24,7 +24,7 @@ Open a web browser and type the following url:
 http://localhost:4000/
 ```
 
-### Developers
+## Developers
 The Atari 'Space Invaders' game hack and website was the work of the following developer:
 
 - [Hasan Sonmez](https://github.com/UltimateCoder00)
@@ -32,7 +32,7 @@ The Atari 'Space Invaders' game hack and website was the work of the following d
 - [Vivien Tang](https://github.com/honjintang)
 - [William Schwier](https://github.com/w-schwier)
 
-### User Stories
+## User Stories
 Below is a list of the user stories used to develop a minimum viable product (MVP), website and game hacks:
 
 ```
