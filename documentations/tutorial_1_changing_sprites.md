@@ -1,3 +1,9 @@
+---
+layout: page
+title: Tutorial 1 - Changing sprites
+permalink: /tutorial1/
+---
+
 # **Tutorial 1 - Changing sprites**
 
 The other method can also be used to achieve the same goals, however, if all you want to change is the graphics then this is the quickest, easiest method.
@@ -12,7 +18,7 @@ All indexed text is further information about the software or process, it’s no
 
 **Getting DOSBox ready:**
 
-￼ ![](/public/dosbox1.png?raw=true)
+￼ ![](/images/dosbox1.png?raw=true)
 
 * Open up DOSBox by double clicking it. This will open up the DOS environment terminal.
 
@@ -28,7 +34,7 @@ All indexed text is further information about the software or process, it’s no
 
 **Disassembling with Editgfx:**
 
-￼ ![](/public/dosbox2.png?raw=true)
+￼ ![](/images/dosbox2.png?raw=true)
 
 * Still in DOSBox terminal, type `showgfx spcinvad.bin 0 4096 > spcinvad.txt`
 
@@ -41,7 +47,7 @@ N.b. If you ROM is called something different you should reference that name ins
 
 * Using either TextEdit or Atom open the text file, you should see something similar to the image below:
 
-  ![](/public/text_file1.png?raw=true) ￼
+  ![](/images/text_file1.png?raw=true) ￼
 
 * Now comes the fun part, time to make some changes. Identify the sprite you want to change, in this example we will be changing the players ship; however, this method can be used for changing any sprite.
 
@@ -51,12 +57,12 @@ N.b. If you ROM is called something different you should reference that name ins
 
 N.b. Table width, not sprite width. By comparing the two images you can see our sprite is wider than the original, but it still fits into the table.
 
-  ![](/public/text_file2.png?raw=true)
+  ![](/images/text_file2.png?raw=true)
 * Once you have made your changes save the file. As you can see above, we have changed the ship into a stick-man.
 
 **Reassemble the code:**
 
-￼ ![](/public/dosbox3.png?raw=true)
+￼ ![](/images/dosbox3.png?raw=true)
 
 * Type `editgfx spcinvad.txt testspac.bin` into the DOSBox terminal.
 
@@ -71,4 +77,4 @@ N.b. Table width, not sprite width. By comparing the two images you can see our 
 * Finally, double click your file while in the Atari 2600 console section.
 * If everything worked, you should be able to see your changes in game.
 
-￼ ![](/public/space.png?raw=true)
+￼ ![](/images/space.png?raw=true)

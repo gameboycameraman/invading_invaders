@@ -1,46 +1,52 @@
+---
+layout: page
+title: Set up
+permalink: /setup/
+---
+
 # **Set up**
 
-First thing needed is an empty project folder. You will also want to navigate into this folder in your terminal. If you are un-familiar with the terminal, you can find basic commands here: https://gist.github.com/poopsplat/7195274
+First thing needed is an empty project folder. You will also want to navigate into this folder in your terminal. If you are un-familiar with the terminal, you can find basic commands here: [https://gist.github.com/poopsplat/7195274](https://gist.github.com/poopsplat/7195274)
 It is worth noting we use two methods, see tutorials section for further clarification; each software mentioned below will either have an 'I' or 'II' depending which method the software is needed for.
 
 
 **Text Editor - Atom ( I & II )**
-	https://atom.io/
+	[https://atom.io/](https://atom.io/)
 
 Download from site and follow instructions on website.
 
 This is a text editor that we used to change the files, also a nice program for general code writing, can also be note in Text Edit.
 
 **Emulator - OpenEMU (Only for Macs) ( I & II )**
-	http://openemu.org/
+	[http://openemu.org/](http://openemu.org/)
 
 Download from site and open OpenEMU
 
 This is an emulator used to load and play the ROMS.
 
 **Rom - Space Invaders  (I & II )**
-	http://www.atariage.com/software_page.html?SoftwareLabelID=459
+	[http://www.atariage.com/software_page.html?SoftwareLabelID=459](http://www.atariage.com/software_page.html?SoftwareLabelID=459)
 
 Download and place into your project folder.
 
 This is the ROM used to play the game, and the file we will be editing.
 
 **DosBox - DOS x86 emulator ( I )**
-	https://www.dosbox.com/download.php?main=1
+	[https://www.dosbox.com/download.php?main=1](https://www.dosbox.com/download.php?main=1)
 
 Download and open the file. Move DOSBox to the project folder.
 
 This software is used to run windows programs on a Mac. Particularly useful as modern Microsoft pc’s can’t open the software listed below as they are 16 bit.
 
 **2600 gfx ( I )**
-	https://www.orphanedgames.com/APF/apf_programming/apf_programming_tools/apf_programming_tools.html (Top link)
+	[https://www.orphanedgames.com/APF/apf_programming/apf_programming_tools/apf_programming_tools.html](https://www.orphanedgames.com/APF/apf_programming/apf_programming_tools/apf_programming_tools.html) (Top link)
 
 Download and place showgfx and editgfx in the project folder. These programs will need to be run through DOSBox.
 
 These programs allow you to take a .bin file and transfer it to a .txt file. Allowing you to change the sprites, Editgfx allows you to re-assemble the code into a .bin file so it’s runnable on an emulator
 
 **Distella ( II )**
-	http://distella.sourceforge.net
+	[http://distella.sourceforge.net](https://www.orphanedgames.com/APF/apf_programming/apf_programming_tools/apf_programming_tools.html)
 
 Download and navigate to the OS X folder. Place distella.exe into your project folder.
 
