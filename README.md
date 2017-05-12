@@ -26,7 +26,7 @@ bundle exec jekyll serve
 ### 4) Open in your browser
 Open a web browser and type the following url:
 ```
-http://localhost:4000/
+[http://localhost:4000/](http://localhost:4000/)
 ```
 
 ## Developers
