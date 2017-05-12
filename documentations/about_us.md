@@ -6,7 +6,7 @@ permalink: /about_us/
 
 # **About The Invaders Team**
 
-Our team is composed of 4 talented developpers who studied at Makers Academy.
+Our team is composed of 4 talented developers who studied at Makers Academy.
 
 ![](/images/team/GB_6978.jpeg?raw=true)
 - [Vivien Tang](https://github.com/honjintang)
@@ -22,7 +22,7 @@ Our team is composed of 4 talented developpers who studied at Makers Academy.
 
 This project is part of our practice final projects and we are proud and happy to share it with all of you.
 
-Working on such subject was complex for various reasons. First the idea of hacking, as glamourous it can sound, is full of grey zones, the most important being:
+Working on such subject was complex for various reasons. First the idea of hacking, as glamorous it can sound, is full of grey zones, the most important being:
 
 * Is it legal to hack a game ?
 
