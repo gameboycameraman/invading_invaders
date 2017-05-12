@@ -48,6 +48,6 @@ This program allows you to disassemble the code into the source code, a .src fil
 
 **Dasm ( II )**
 
-Into your terminal type: 'brew install dasm'
+Into your terminal type: `brew install dasm`
 
 Dasm allows you to reassemble the code into a .bin file, ready to be played on an emulator.
