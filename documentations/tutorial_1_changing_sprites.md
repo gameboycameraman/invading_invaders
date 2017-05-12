@@ -1,3 +1,9 @@
+---
+layout: page
+title: Tutorial 1 - Changing sprites
+permalink: /tutorial1/
+---
+
 # **Tutorial 1 - Changing sprites**
 
 N.b. The other method can also be used to achieve the same goals, however, if all you want to change is the graphics then this is the quickest, easiest method.
@@ -10,7 +16,7 @@ N.b. All indexed text is further information about the software or process, it�
 
 **Getting DOSBox ready:**
 
-￼ ![](/public/dosbox.png?raw=true)
+￼ ![alt text](/images/dosbox.png?raw=true)
 
 * Open up DOSBox by double clicking it. This will open up the DOS environment terminal.
 

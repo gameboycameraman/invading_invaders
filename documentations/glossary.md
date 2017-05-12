@@ -1,3 +1,9 @@
+---
+layout: page
+title: Glossary
+permalink: /glossary/
+---
+
 # **Glossary**
 
 ### ROM
@@ -11,20 +17,20 @@ One technique of ROM hacking is editing the game’s actual code through Assembl
 
 Machine language is a set of instructions executed directly by a computer’s central processing unit, where each instruction performs a specific task on a unit of data. Numerical code, such as binary, is a low level representation of an assembled computer programme. The following is an example of machine language (binary, translated into hexadecimal), that takes a single 32-bit integer argument ’n’ and returns through eax the value 3n+1 if n is even and 4n-3 if n is odd,.
 
-Machine language 			          Assembly language
-
- 0:   8b 4c 24 04             	mov  ecx, [esp+4]
- 4:   8b c1                   	mov  eax, ecx
- 6:   99                      	cdq
- 7:   33 c2                  		xor  eax, edx
- 9:   2b c2                   	sub  eax, edx
- b:   83 e0 01                	and  eax, 1
- e:   33 c2                   	xor  eax, edx
-10:   2b c2                   	sub  eax, edx
-12:   8d 44 49 01             	lea  eax, [ecx+ecx*2+1]
-16:   74 07                  		je   01fh
-18:   8d 04 8d fd ff ff ff    	lea  eax, [ecx*4-3]
-1f:   c3                      	ret    
+|     Machine language 			|		Assembly language    |
+|---------------------------|------------------------|
+| 0:   8b 4c 24 04 					| mov  ecx, [esp+4]      |
+| 4:   8b c1       					| mov  eax, ecx          |
+| 6:   99          					| cdq                    |
+| 7:   33 c2       					| xor  eax, edx          |
+| 9:   2b c2       					| sub  eax, edx          |
+| b:   83 e0 01    					| and  eax, 1            |
+| e:   33 c2       					| xor  eax, edx          |
+| 10:   2b c2      					| sub  eax, edx          |
+| 12:   8d 44 49 01					| lea  eax, [ecx+ecx*2+1]|
+| 16:   74 07      					| je   01fh              |
+| 18:   8d 04 8d fd ff ff ff| lea  eax, [ecx*4-3]    |
+| 1f:   c3         					| ret                    |
 
 When converted into assembly language, it is easier to understand that 8B is the first byte of a MOV instruction that moves from a memory location into a register.  The second byte, 4C, shows that the register we are moving into is ecx, and that the source of the move is determined from the next two bytes. The bytes are 24 and 04 meaning we add the contents of esp and 4 to find the source address. The assembly language shown in the example above uses the NASM syntax, but there are no set rules for what an assembly language should look like.
 
@@ -58,20 +64,21 @@ Hexadecimal is a base 16 numeral system which is widely used in programming as a
 
 The numbers from decimal 0 to 15 are listed below in binary and hexadecimal form for comparison:
 
-Decimal	  Binary		Hexadecimal
-0			    0		      0
-1			    1		      1
-2			    10		    2
-3			    11		    3
-4			    100		    4
-5			    101		    5
-6			    110		    6
-7			    111		    7
-8			    1000		  8
-9			    1001		  9
-10	      1010		  A
-11		    1011		  B
-12		    1100		  C
-13		    1101		  D
-14		    1110		  E
-15		    1111		  F
+|Decimal |	  Binary |		Hexadecimal  |
+|--------|-----------|-----------------|
+|0			 |  0		     | 0               |
+|1			 |  1		     | 1               |
+|2			 |  10		   | 2               |
+|3			 |  11		   | 3               |
+|4			 |  100		   | 4               |
+|5			 |  101		   | 5               |
+|6			 |  110		   | 6               |
+|7			 |  111		   | 7               |
+|8			 |  1000		 | 8               |
+|9			 |  1001		 | 9               |
+|10	     |  1010		 | A               |
+|11		   |  1011		 | B               |
+|12		   |  1100		 | C               |
+|13		   |  1101		 | D               |
+|14		   |  1110		 | E               |
+|15		   |  1111		 | F               |
