@@ -4,7 +4,7 @@ title: Tutorial 1
 permalink: /tutorial1/
 ---
 
-# **Tutorial 1 - Changing sprites**
+# **Changing sprites**
 
 Tutorial 2 can also be used to achieve the same goals, however, if all you want to change is the graphics then this is the quickest, easiest method.
 

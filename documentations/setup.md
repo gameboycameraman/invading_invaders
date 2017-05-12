@@ -4,8 +4,6 @@ title: Set up
 permalink: /setup/
 ---
 
-# **Set up**
-
 First thing needed is an empty project folder.
 
 It is worth noting there are two tutorials on this page, both using different methods. Tutorial 1 is much simpler than the second, but doesn't allow for other hacks, apart from changing the graphics. Tutorial 1 is simpler as the process of changing the sprite in tutorial 2 involves more processes and some maths.

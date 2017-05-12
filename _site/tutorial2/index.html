@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Tutorial 2</title>
-  <meta name="description" content="This site contains information and tutorials on hacking the Atari &#39;Space Invaders&#39; game.">
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/tutorial2/">
@@ -91,7 +91,7 @@
   </header>
 
   <div class="post-content">
-    <h1 id="changing-sprites-tutorial-2">Changing Sprites (Tutorial 2)</h1>
+    <h1 id="changing-graphics"><strong>Changing Graphics</strong></h1>
 
 <p>This second method of changing the game’s graphics is a little more complicated than tutorial 1, as it involves Assembly or ASM hacking. This method will allow you to directly manipulate the game’s code and potentially modify anything within the game, such as gameplay, audio and levels.</p>
 
@@ -100,7 +100,8 @@
   <li>Disassemble the ROM image.</li>
   <li>Locate the graphics in the code.</li>
   <li>Use an ASCII config file to further reveal commented representations of the graphics.</li>
-  <li>Change the hex data statements.</li>
+  <li>Change the hex data statements to modify sprites.</li>
+  <li>Change hex data to modify background colour.</li>
   <li>Assemble the ROM again.</li>
 </ul>
 
@@ -231,7 +232,17 @@ GFX FF4C FFFF
 
 <p>Adding up the numbers with an ‘X’ beneath them gives a total of 254, which means is FE when converted to hexadecimal. Each byte of graphical data must be converted to hexadecimal in this manner. There is no need to change the X representations, as they are merely comments with no bearing on the final bin file. Save your file.</p>
 
-<h3 id="5-assemble-the-source-code">5) Assemble the source code</h3>
+<h3 id="5-change-background-colour">5) Change background colour</h3>
+
+<p>To modify the game’s background colour, search the source code for hex data associated with ‘COLUBK’. This is a label which stands for ‘Colour-Luminosity Background’, and allows you to set the colour of the game’s background.</p>
+
+<p>The hex number assigned to COLUBK represents a colour from the NTSC chart.</p>
+
+<p>Locate the first instance of COLUBK in the source code (at byte address F289). Change the hex value of the LDA (Load Accumulator) in the line above to modify the colour of the ground.</p>
+
+<p>To change the colour of the background, amend the hex value of the LDA label above the second instance of COLUBK in the source code (at byte address F9D6). Save your file.</p>
+
+<h3 id="6-assemble-the-source-code">6) Assemble the source code</h3>
 
 <p>Run the following in terminal:</p>
 
@@ -239,7 +250,7 @@ GFX FF4C FFFF
 </code></pre>
 </div>
 
-<p>Now your edited source file has been reassembled by DASM, and you can run your test1.bin file on an emulator to play Space Invaders with your modified sprites.</p>
+<p>Now your edited source file has been reassembled by DASM, and you can run your test1.bin file on an emulator to play Space Invaders with your modified graphics.</p>
 
   </div>
 
@@ -275,9 +286,7 @@ GFX FF4C FFFF
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>This site contains information and tutorials on hacking the Atari
-               &#39;Space Invaders&#39; game.
-</p>
+        <p></p>
       </div>
     </div>
 

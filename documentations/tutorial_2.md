@@ -4,7 +4,7 @@ title: Tutorial 2
 permalink: /tutorial2/
 ---
 
-# Changing Graphics (Tutorial 2)
+# **Changing Graphics**
 
 This second method of changing the game's graphics is a little more complicated than tutorial 1, as it involves Assembly or ASM hacking. This method will allow you to directly manipulate the game's code and potentially modify anything within the game, such as gameplay, audio and levels.
 
